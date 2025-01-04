@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Andy Kani | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="turbolinks-cache-control" content="no-cache" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost/build/assets/app-CKm9A11s.css">
+  <script type="module" defer src="http://localhost/build/assets/app-Dkagiwk4.js"></script>
+
+  
+
+</head>
+<body>
+  <nav class="container header">
+  <a href="http://localhost" class="name">
+    AK
+  </a>
+  <ul>
+    <li><a class="header__action" href="http://localhost/contact"><span>Me </span>contact<span>er</span></a></li>
+  </ul>
+</nav>
+  
+<div class="contact-page relative">
+  <div class="page-header" style="background-image: url(images/montpellier.jpg)"></div>
+  
+  <section class="section fade">
+    <div class="contact-card">
+      <div class="section__top-title fade">Obtenir un devis</div>
+      <h1 class="section__title fade" data-delay="1">Me contacter</h1>
+      <p class="fade" data-delay="2">
+        Merci de donner un maximum de détail sur le projet afin que je
+        puisse évaluer correctement la charge de travail que représente
+        votre projet. Cela permettra aussi d'avoir un premier chiffrage au
+        plus proche du devis final.
+      </p>
+      <form method="POST" action="http://localhost/contact" class="contact-form fade" data-delay="3">
+        <input type="hidden" name="_token" value="pO5uIHl32tOT4Hr915dSHSQESaDx1s3DI0RgwlHg" autocomplete="off">        <div>
+          <input type="text" name="name" placeholder="Nom & Prénom" aria-label="Votre Nom" required minlength="3" id="name" />
+          
+          <input type="email" name="email" placeholder="Email" aria-label="Votre email" required id="email" />
+                  </div>
+
+        <textarea name="description" placeholder="Description du projet" aria-label="Description du projet" required minlength="20" id="description"></textarea>
+        
+        <div>
+          <button class="btn" type="submit">Obtenir un devis</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="section faq" style="padding-top: 0">
+    <div class="faq__side">
+      <div class="section__top-title fade">FAQ</div>
+      <h2 class="section__title fade" data-delay="1">
+        Les questions fréquentes
+      </h2>
+    </div>
+    <div class="faq__body fade" data-delay="2">
+      <div class="faq__question">
+        <h3>Quels sont vos disponibilités ?</h3>
+        <p>Je suis actuellement disponible</p>
+      </div>
+
+      <div class="faq__question">
+        <h3>Quels sont vos tarifs ?</h3>
+        <p>
+          La tarification dépend du projet et surtout du temps qui sera
+          nécessaire pour le mener à bien. À titre indicatif mon tarif
+          journalier moyen se situe aux alentour de
+          <strong>25$</strong>/jour.
+        </p>
+      </div>
+
+      <div class="faq__question">
+        <h3>Effectuez-vous des missions en Agence ?</h3>
+        <p>J'effectue l'ensemble de mes missions à distance.</p>
+      </div>
+
+      <div class="faq__question">
+        <h3>Faites-vous la partie design des projets ?</h3>
+        <p class="formatted">
+          Je ne suis malheureusement pas en capacité d'effectuer le design
+          d'une application aussi il sera nécessaire de fournir le design si
+          la mission le nécessite.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section social">
+    <div class="section__top-title fade">Réseaux sociaux</div>
+    <div class="section__title fade" data-delay="1">Me retrouver</div>
+    <div class="social-links fade" data-delay="2">
+      <a href="https://github.com/Grafikart" target="_blank">
+        <strong>Github</strong>
+        <span>github.com/Grafikart</span>
+        <svg class="icon">
+          <use xlink:href="/images/sprite.svg#github"></use>
+        </svg>
+      </a>
+      <a href="https://youtube.com/c/grafikart" target="_blank">
+        <strong>Youtube</strong>
+        <span>youtube.com/c/grafikart</span>
+        <svg class="icon">
+          <use xlink:href="/images/sprite.svg#youtube"></use>
+        </svg>
+      </a>
+      <a href="https://twitter.com/grafikart_fr" target="_blank">
+        <strong>Twitter</strong>
+        <span>twitter.com/grafikart_fr</span>
+        <svg class="icon">
+          <use xlink:href="/images/sprite.svg#twitter"></use>
+        </svg>
+      </a>
+    </div>
+  </section>
+</div>
+  <footer class="footer">
+   Design par Andy - Intégration et développement <a href="http://localhost">Andy Kani</a>
+ </footer>
+</body>
+</html>

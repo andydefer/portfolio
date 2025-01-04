@@ -1,0 +1,98 @@
+{
+  "resources/css/app.scss": {
+    "file": "assets/app-CKm9A11s.css",
+    "src": "resources/css/app.scss",
+    "isEntry": true
+  },
+  "resources/css/fonts/HKGrotesk-Bold.00053952.ttf": {
+    "file": "assets/HKGrotesk-Bold.00053952-BdqYibU2.ttf",
+    "src": "resources/css/fonts/HKGrotesk-Bold.00053952.ttf"
+  },
+  "resources/css/fonts/HKGrotesk-Bold.ea610dc0.eot": {
+    "file": "assets/HKGrotesk-Bold.ea610dc0-BW8ivzhV.eot",
+    "src": "resources/css/fonts/HKGrotesk-Bold.ea610dc0.eot"
+  },
+  "resources/css/fonts/HKGrotesk-Bold.f6230be8.woff2": {
+    "file": "assets/HKGrotesk-Bold.f6230be8-C5TWYZME.woff2",
+    "src": "resources/css/fonts/HKGrotesk-Bold.f6230be8.woff2"
+  },
+  "resources/css/fonts/HKGrotesk-Bold.fccfa422.woff": {
+    "file": "assets/HKGrotesk-Bold.fccfa422-DJOiv_y6.woff",
+    "src": "resources/css/fonts/HKGrotesk-Bold.fccfa422.woff"
+  },
+  "resources/css/fonts/HKGrotesk-Light.195d9e18.ttf": {
+    "file": "assets/HKGrotesk-Light.195d9e18-DDFL8cTE.ttf",
+    "src": "resources/css/fonts/HKGrotesk-Light.195d9e18.ttf"
+  },
+  "resources/css/fonts/HKGrotesk-Light.210fd9d9.eot": {
+    "file": "assets/HKGrotesk-Light.210fd9d9-zyMjOEmX.eot",
+    "src": "resources/css/fonts/HKGrotesk-Light.210fd9d9.eot"
+  },
+  "resources/css/fonts/HKGrotesk-Light.80ef57a6.woff": {
+    "file": "assets/HKGrotesk-Light.80ef57a6-CONj9t-U.woff",
+    "src": "resources/css/fonts/HKGrotesk-Light.80ef57a6.woff"
+  },
+  "resources/css/fonts/HKGrotesk-Light.8dd9ff39.woff2": {
+    "file": "assets/HKGrotesk-Light.8dd9ff39-ByyD_IKE.woff2",
+    "src": "resources/css/fonts/HKGrotesk-Light.8dd9ff39.woff2"
+  },
+  "resources/css/fonts/HKGrotesk-Regular.2342c077.ttf": {
+    "file": "assets/HKGrotesk-Regular.2342c077-C00QmbcD.ttf",
+    "src": "resources/css/fonts/HKGrotesk-Regular.2342c077.ttf"
+  },
+  "resources/css/fonts/HKGrotesk-Regular.9420efde.woff2": {
+    "file": "assets/HKGrotesk-Regular.9420efde-CuYR3avV.woff2",
+    "src": "resources/css/fonts/HKGrotesk-Regular.9420efde.woff2"
+  },
+  "resources/css/fonts/HKGrotesk-Regular.9623c97e.eot": {
+    "file": "assets/HKGrotesk-Regular.9623c97e-DhjAwrmo.eot",
+    "src": "resources/css/fonts/HKGrotesk-Regular.9623c97e.eot"
+  },
+  "resources/css/fonts/HKGrotesk-Regular.b7f8f441.woff": {
+    "file": "assets/HKGrotesk-Regular.b7f8f441-ZfCdSrjn.woff",
+    "src": "resources/css/fonts/HKGrotesk-Regular.b7f8f441.woff"
+  },
+  "resources/css/fonts/HKGrotesk-SemiBold.2a580330.eot": {
+    "file": "assets/HKGrotesk-SemiBold.2a580330-CQ2pg7UX.eot",
+    "src": "resources/css/fonts/HKGrotesk-SemiBold.2a580330.eot"
+  },
+  "resources/css/fonts/HKGrotesk-SemiBold.5408aeb3.woff2": {
+    "file": "assets/HKGrotesk-SemiBold.5408aeb3-DKQXMp0g.woff2",
+    "src": "resources/css/fonts/HKGrotesk-SemiBold.5408aeb3.woff2"
+  },
+  "resources/css/fonts/HKGrotesk-SemiBold.7541a5ad.woff": {
+    "file": "assets/HKGrotesk-SemiBold.7541a5ad-Bfw0pRbv.woff",
+    "src": "resources/css/fonts/HKGrotesk-SemiBold.7541a5ad.woff"
+  },
+  "resources/css/fonts/HKGrotesk-SemiBold.e0b58518.ttf": {
+    "file": "assets/HKGrotesk-SemiBold.e0b58518-MTQgH-JJ.ttf",
+    "src": "resources/css/fonts/HKGrotesk-SemiBold.e0b58518.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Dkagiwk4.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-CKm9A11s.css"
+    ],
+    "assets": [
+      "assets/HKGrotesk-Regular.9420efde-CuYR3avV.woff2",
+      "assets/HKGrotesk-Regular.b7f8f441-ZfCdSrjn.woff",
+      "assets/HKGrotesk-Regular.2342c077-C00QmbcD.ttf",
+      "assets/HKGrotesk-Regular.9623c97e-DhjAwrmo.eot",
+      "assets/HKGrotesk-SemiBold.5408aeb3-DKQXMp0g.woff2",
+      "assets/HKGrotesk-SemiBold.7541a5ad-Bfw0pRbv.woff",
+      "assets/HKGrotesk-SemiBold.e0b58518-MTQgH-JJ.ttf",
+      "assets/HKGrotesk-SemiBold.2a580330-CQ2pg7UX.eot",
+      "assets/HKGrotesk-Bold.f6230be8-C5TWYZME.woff2",
+      "assets/HKGrotesk-Bold.fccfa422-DJOiv_y6.woff",
+      "assets/HKGrotesk-Bold.00053952-BdqYibU2.ttf",
+      "assets/HKGrotesk-Bold.ea610dc0-BW8ivzhV.eot",
+      "assets/HKGrotesk-Light.8dd9ff39-ByyD_IKE.woff2",
+      "assets/HKGrotesk-Light.80ef57a6-CONj9t-U.woff",
+      "assets/HKGrotesk-Light.195d9e18-DDFL8cTE.ttf",
+      "assets/HKGrotesk-Light.210fd9d9-zyMjOEmX.eot"
+    ]
+  }
+}
