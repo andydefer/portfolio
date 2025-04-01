@@ -135,26 +135,24 @@ const Navbar = () => {
             exit="hidden"
           >
             <div className="pt-2 pb-3 space-y-1 bg-white">
-              {["Home", "About", "Skills", "Projects", "Contact"].map(
-                (item, index) => (
-                  <motion.a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      delay: index * 0.05,
-                      ease: "easeOut",
-                    }}
-                    whileTap={{ backgroundColor: "#EEF2FF" }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </motion.a>
-                )
-              )}
+              {data.routes.map((item, index) => (
+                <motion.a
+                  key={item.name}
+                  href={`#${item.link.toLowerCase()}`}
+                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.05,
+                    ease: "easeOut",
+                  }}
+                  whileTap={{ backgroundColor: "#EEF2FF" }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
             </div>
           </motion.div>
         )}
