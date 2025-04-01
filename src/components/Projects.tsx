@@ -1,14 +1,14 @@
-import React, { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { fadeInUp, scaleUp, staggerContainer } from '../utils/animations';
+import { AnimatePresence, motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { fadeInUp, staggerContainer } from "../utils/animations";
 
 // Project card component with animation
 const ProjectCard = ({
   title,
   description,
   tags,
-  imageUrl
+  imageUrl,
 }: {
   title: string;
   description: string;
@@ -28,7 +28,7 @@ const ProjectCard = ({
         duration: 0.5,
         type: "spring",
         stiffness: 100,
-        damping: 15
+        damping: 15,
       }}
       whileHover={{ y: -10, scale: 1.02 }}
     >
@@ -44,7 +44,9 @@ const ProjectCard = ({
             alt={title}
             className="w-full h-full object-cover"
             initial={{ scale: 1.2, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : { scale: 1.2, opacity: 0 }}
+            animate={
+              isInView ? { scale: 1, opacity: 1 } : { scale: 1.2, opacity: 0 }
+            }
             transition={{ duration: 0.5, delay: 0.2 }}
           />
         ) : (
@@ -55,15 +57,23 @@ const ProjectCard = ({
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
               initial={{ scale: 0, opacity: 0, rotate: -10 }}
-              animate={isInView ? { scale: 1, opacity: 1, rotate: 0 } : { scale: 0, opacity: 0, rotate: -10 }}
+              animate={
+                isInView
+                  ? { scale: 1, opacity: 1, rotate: 0 }
+                  : { scale: 0, opacity: 0, rotate: -10 }
+              }
               transition={{
                 duration: 0.5,
                 delay: 0.3,
                 type: "spring",
-                stiffness: 200
+                stiffness: 200,
               }}
             >
-              <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                clipRule="evenodd"
+              />
             </motion.svg>
           </div>
         )}
@@ -108,7 +118,7 @@ const ProjectCard = ({
               whileHover={{
                 scale: 1.1,
                 backgroundColor: "#C7D2FE",
-                transition: { duration: 0.2 }
+                transition: { duration: 0.2 },
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -127,42 +137,48 @@ const Projects = () => {
     {
       id: 1,
       title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with product management, cart functionality, and payment processing.",
+      description:
+        "A full-stack e-commerce solution with product management, cart functionality, and payment processing.",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       imageUrl: "",
     },
     {
       id: 2,
       title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media metrics with real-time data visualization.",
+      description:
+        "Analytics dashboard for social media metrics with real-time data visualization.",
       tags: ["React", "D3.js", "Firebase", "Tailwind CSS"],
       imageUrl: "",
     },
     {
       id: 3,
       title: "Task Management App",
-      description: "Collaborative task management application with real-time updates and team features.",
+      description:
+        "Collaborative task management application with real-time updates and team features.",
       tags: ["TypeScript", "React", "Express", "Socket.io"],
       imageUrl: "",
     },
     {
       id: 4,
       title: "Weather Forecast App",
-      description: "Location-based weather forecast application with 7-day predictions and historical data.",
+      description:
+        "Location-based weather forecast application with 7-day predictions and historical data.",
       tags: ["JavaScript", "OpenWeather API", "Chart.js"],
       imageUrl: "",
     },
     {
       id: 5,
       title: "Portfolio Website",
-      description: "Personal portfolio website built with modern web technologies.",
+      description:
+        "Personal portfolio website built with modern web technologies.",
       tags: ["React", "Tailwind CSS", "Vite"],
       imageUrl: "",
     },
     {
       id: 6,
       title: "Recipe Finder App",
-      description: "Recipe search and saving application with filtering by ingredients and dietary restrictions.",
+      description:
+        "Recipe search and saving application with filtering by ingredients and dietary restrictions.",
       tags: ["React", "Redux", "Food API"],
       imageUrl: "",
     },
@@ -172,12 +188,16 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   // Get unique tags for filter buttons
-  const allTags = ["All", ...new Set(projects.flatMap(project => project.tags))];
+  const allTags = [
+    "All",
+    ...new Set(projects.flatMap((project) => project.tags)),
+  ];
 
   // Filter projects based on active filter
-  const filteredProjects = activeFilter === "All"
-    ? projects
-    : projects.filter(project => project.tags.includes(activeFilter));
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((project) => project.tags.includes(activeFilter));
 
   // Refs for animation triggers
   const sectionRef = useRef<HTMLElement>(null);
@@ -189,10 +209,12 @@ const Projects = () => {
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
-          animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900">My Projects</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Mes Projets</h2>
           <motion.div
             className="h-1 w-20 bg-indigo-600 mx-auto mt-2"
             initial={{ width: 0 }}
@@ -205,7 +227,8 @@ const Projects = () => {
             animate={isSectionInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Here are some projects I've worked on. Each project demonstrates different skills and technologies.
+            Voici quelques projets sur lesquels j'ai travaillé. Chaque projet
+            met en avant différentes compétences et technologies.
           </motion.p>
         </motion.div>
 
@@ -213,7 +236,9 @@ const Projects = () => {
         <motion.div
           className="flex flex-wrap justify-center gap-2 mb-10"
           initial={{ opacity: 0, y: 20 }}
-          animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={
+            isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           {allTags.map((tag, index) => (
@@ -222,17 +247,17 @@ const Projects = () => {
               onClick={() => setActiveFilter(tag)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
                 activeFilter === tag
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? "bg-indigo-600 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.3,
-                delay: 0.7 + (index * 0.05),
+                delay: 0.7 + index * 0.05,
                 type: "spring",
                 stiffness: 200,
-                damping: 15
+                damping: 15,
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -252,7 +277,7 @@ const Projects = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            {filteredProjects.map(project => (
+            {filteredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 title={project.title}

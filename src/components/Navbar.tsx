@@ -1,6 +1,11 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { navbarAnimation, mobileMenuAnimation, popIn } from '../utils/animations';
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  mobileMenuAnimation,
+  navbarAnimation,
+  popIn,
+} from "../utils/animations";
+import { data } from "../utils/data";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +22,9 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -30,7 +35,9 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed w-full z-10 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white shadow-md'
+        scrolled
+          ? "bg-white/95 backdrop-blur-sm shadow-md"
+          : "bg-white shadow-md"
       }`}
       initial="hidden"
       animate="visible"
@@ -38,37 +45,34 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <motion.div
-            className="flex items-center"
-            variants={popIn}
-          >
+          <motion.div className="flex items-center" variants={popIn}>
             <motion.span
               className="text-xl font-bold text-gray-800"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Portfolio
+              {data.appName}
             </motion.span>
           </motion.div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+            {data.routes.map((item, index) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.name}
+                href={`#${item.link.toLowerCase()}`}
                 className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
                   delay: index * 0.1,
-                  ease: "easeOut"
+                  ease: "easeOut",
                 }}
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {item}
+                {item.name}
               </motion.a>
             ))}
           </div>
@@ -91,7 +95,12 @@ const Navbar = () => {
                   stroke="currentColor"
                   aria-hidden="true"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
                 <svg
@@ -102,7 +111,12 @@ const Navbar = () => {
                   stroke="currentColor"
                   aria-hidden="true"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </motion.button>
@@ -121,24 +135,26 @@ const Navbar = () => {
             exit="hidden"
           >
             <div className="pt-2 pb-3 space-y-1 bg-white">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    delay: index * 0.05,
-                    ease: "easeOut"
-                  }}
-                  whileTap={{ backgroundColor: "#EEF2FF" }}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </motion.a>
-              ))}
+              {["Home", "About", "Skills", "Projects", "Contact"].map(
+                (item, index) => (
+                  <motion.a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: index * 0.05,
+                      ease: "easeOut",
+                    }}
+                    whileTap={{ backgroundColor: "#EEF2FF" }}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item}
+                  </motion.a>
+                )
+              )}
             </div>
           </motion.div>
         )}
