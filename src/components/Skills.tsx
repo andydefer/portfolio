@@ -159,7 +159,7 @@ const Skills = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-center place-items-center gap-12 mb-16">
           {/* Frontend skills */}
           <motion.div
             ref={frontendRef}
