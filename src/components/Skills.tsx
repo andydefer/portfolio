@@ -168,6 +168,7 @@ const Skills = () => {
               isFrontendInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
             }
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
             <motion.h3
               className="text-xl font-semibold text-gray-800 mb-6"
@@ -198,6 +199,7 @@ const Skills = () => {
               isBackendInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
             <motion.h3
               className="text-xl font-semibold text-gray-800 mb-6"
@@ -228,6 +230,7 @@ const Skills = () => {
               isBackendInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
             }
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
             <motion.h3
               className="text-xl font-semibold text-gray-800 mb-6"
