@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight, fadeInUp } from "../utils/animations";
+import { data } from "../utils/data";
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Hi, I'm
+              Salut, Je Suis
             </motion.span>
             <motion.span
               className="block text-indigo-600"
@@ -33,7 +34,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              John Doe
+              {data.appName}
             </motion.span>
           </motion.h1>
           <motion.h2
