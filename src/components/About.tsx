@@ -57,31 +57,19 @@ const About = () => {
             >
               {/* Replace with actual image */}
               <div className="aspect-w-4 aspect-h-5 bg-gray-300 flex items-center justify-center">
-                <motion.svg
-                  className="w-32 h-32 text-gray-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-                  animate={
-                    isImageInView
-                      ? { opacity: 1, scale: 1, rotate: 0 }
-                      : { opacity: 0, scale: 0.5, rotate: -10 }
-                  }
+                <motion.img
+                  className="text-gray-500"
+                  src="/public/assets/andy-kani.png"
+                  alt="Profile icon"
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
                   transition={{
-                    duration: 0.5,
-                    delay: 0.2,
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
+                    delay: 1.2,
                   }}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
-                    clipRule="evenodd"
-                  />
-                </motion.svg>
+                />
               </div>
             </motion.div>
           </motion.div>

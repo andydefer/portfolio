@@ -136,51 +136,51 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "Farnana",
       description:
-        "A full-stack e-commerce solution with product management, cart functionality, and payment processing.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      imageUrl: "",
+        "Farnana est une plateforme congolaise d’apprentissage en ligne, offrant des cours pratiques, accessibles à vie, ainsi que des formations avec certificats ou diplômes, en partenariat avec des institutions reconnues, le tout avec des options gratuites ou payantes.",
+      tags: ["React", "Laravel", "MongoDB", "Stripe"],
+      imageUrl: "/assets/project1.jpg",
     },
     {
       id: 2,
-      title: "Social Media Dashboard",
+      title: "Afya",
       description:
-        "Analytics dashboard for social media metrics with real-time data visualization.",
-      tags: ["React", "D3.js", "Firebase", "Tailwind CSS"],
-      imageUrl: "",
+        "Afya est une plateforme congolaise de prise de rendez-vous médicaux en ligne, permettant aux patients de réserver des consultations facilement avec des professionnels de santé et de gestion des rendez-vous, le tout avec une interface simple et accessible.",
+      tags: ["React", "Android", "Laravel", "Tailwind CSS"],
+      imageUrl: "/assets/project2.jpg",
     },
     {
       id: 3,
-      title: "Task Management App",
+      title: "Skillwhere",
       description:
-        "Collaborative task management application with real-time updates and team features.",
-      tags: ["TypeScript", "React", "Express", "Socket.io"],
-      imageUrl: "",
+        "Skillwhere est une plateforme en ligne permet l'achat de matériaux de construction de qualité et la location d’équipements spécialisés, offrant une solution pratique et accessible pour les professionnels et particuliers dans le secteur de la construction.",
+      tags: ["TypeScript", "React", "Symfony", "Socket.io"],
+      imageUrl: "/assets/project3.jpg",
     },
     {
       id: 4,
-      title: "Weather Forecast App",
+      title: "Modern Structural Concept",
       description:
-        "Location-based weather forecast application with 7-day predictions and historical data.",
-      tags: ["JavaScript", "OpenWeather API", "Chart.js"],
-      imageUrl: "",
+        "Modern Structural Concept est une entreprise congolaise spécialisée dans l'architecture, la constructione t l'infrastructure, offrant des solutions innovantes et durables pour des projets de qualité en RDC.",
+      tags: ["Vue Js", "Laravel", "Tailwind CSS"],
+      imageUrl: "/assets/project4.jpg",
     },
     {
       id: 5,
-      title: "Portfolio Website",
+      title: "Bartban",
       description:
-        "Personal portfolio website built with modern web technologies.",
-      tags: ["React", "Tailwind CSS", "Vite"],
-      imageUrl: "",
+        "Bartban est une plateforme de financement participatif qui permet aux créateurs de projets de lever des fonds en ligne auprès de la communauté, en soutenant des initiatives créatives, sociales, et entrepreneuriales..",
+      tags: ["Laravel", "React", "Tailwind CSS", "SerdiPay"],
+      imageUrl: "/assets/project5.jpg",
     },
     {
       id: 6,
-      title: "Recipe Finder App",
+      title: "TechPreneurs",
       description:
-        "Recipe search and saving application with filtering by ingredients and dietary restrictions.",
-      tags: ["React", "Redux", "Food API"],
-      imageUrl: "",
+        "TechPreneurs est la maison mère de plateformes innovantes comme Skillwhere, Farnana, et Bartban, soutenant des initiatives technologiques et entrepreneuriales visant à révolutionner l'apprentissage en ligne, la gestion de projets et le financement participatif.",
+      tags: ["React", "Redux", "API REST", "Firebase"],
+      imageUrl: "/assets/project6.jpg",
     },
   ];
 

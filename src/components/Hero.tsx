@@ -109,11 +109,10 @@ const Hero = () => {
           >
             {/* Replace with your profile image */}
             <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-              <motion.svg
-                className="w-24 h-24 text-gray-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+              <motion.img
+                className="text-gray-500"
+                src="/public/assets/andy-classe.png"
+                alt="Profile icon"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
@@ -122,13 +121,7 @@ const Hero = () => {
                   damping: 20,
                   delay: 1.2,
                 }}
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                  clipRule="evenodd"
-                />
-              </motion.svg>
+              />
             </div>
           </motion.div>
         </motion.div>

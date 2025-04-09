@@ -90,43 +90,43 @@ const Skills = () => {
   const isTechInView = useScrollAnimation(techRef, { threshold: 0.1 });
   // Frontend skills
   const frontendSkills = [
-    { name: "React", percentage: 90 },
-    { name: "TypeScript", percentage: 85 },
     { name: "HTML/CSS", percentage: 95 },
+    { name: "TypeScript", percentage: 85 },
+    { name: "React", percentage: 90 },
     { name: "Vue.js", percentage: 80 },
     { name: "TailwindCSS", percentage: 85 },
   ];
 
   // Backend skills
   const backendSkills = [
+    { name: "PHP", percentage: 80 },
+    { name: "Laravel", percentage: 80 },
+    { name: "Symfony", percentage: 75 },
     { name: "Node.js", percentage: 85 },
     { name: "Express", percentage: 80 },
-    { name: "PHP", percentage: 80 },
-    { name: "Symfony", percentage: 75 },
-    { name: "Laravel", percentage: 80 },
   ];
 
   const otherSkills = [
-    { name: "SQL", percentage: 75 },
     { name: "Android Development", percentage: 75 },
     { name: "Git", percentage: 90 },
     { name: "Docker", percentage: 80 },
     { name: "AWS", percentage: 70 },
+    { name: "SQL", percentage: 75 },
   ];
 
   // Technologies - using emoji as placeholders for icons
   const technologies = [
-    { name: "React", icon: "⚛️" },
+    { name: "PHP", icon: "💻" },
     { name: "Node.js", icon: "🟢" },
     { name: "TypeScript", icon: "🔷" },
+    { name: "Laravel", icon: "⚙️" },
+    { name: "React", icon: "⚛️" },
     { name: "MongoDB", icon: "🍃" },
     { name: "Git", icon: "📊" },
     { name: "TailwindCSS", icon: "🌊" },
     { name: "Docker", icon: "🐳" },
     { name: "Symfony", icon: "🔧" },
     { name: "Vue.js", icon: "🔮" },
-    { name: "Laravel", icon: "⚙️" },
-    { name: "PHP", icon: "💻" },
     { name: "Android", icon: "📱" },
   ];
   return (

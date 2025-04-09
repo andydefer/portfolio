@@ -117,7 +117,7 @@ const Contact = () => {
           }
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900">Contact Me</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Me contacter</h2>
           <motion.div
             className="h-1 w-20 bg-indigo-600 mx-auto mt-2"
             initial={{ width: 0 }}
