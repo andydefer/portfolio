@@ -168,7 +168,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Modern Structural Concept",
-      url: "https://modern-Structural-Concept.net",
+      url: "https://modern-Structural-Concept.com",
       description:
         "Modern Structural Concept est une entreprise congolaise spécialisée dans l'architecture, la constructione t l'infrastructure, offrant des solutions innovantes et durables pour des projets de qualité en RDC.",
       tags: ["Vue Js", "Laravel", "Tailwind CSS"],
