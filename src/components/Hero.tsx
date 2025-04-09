@@ -111,7 +111,7 @@ const Hero = () => {
             <div className="w-full h-full bg-gray-300 flex items-center justify-center">
               <motion.img
                 className="text-gray-500"
-                src="/public/assets/andy-classe.png"
+                src="/assets/andy-classe.png"
                 alt="Profile icon"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

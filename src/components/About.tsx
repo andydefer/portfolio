@@ -59,7 +59,7 @@ const About = () => {
               <div className="aspect-w-4 aspect-h-5 bg-gray-300 flex items-center justify-center">
                 <motion.img
                   className="text-gray-500"
-                  src="/public/assets/andy-kani.png"
+                  src="/assets/andy-kani.png"
                   alt="Profile icon"
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
