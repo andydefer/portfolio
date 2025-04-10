@@ -342,7 +342,7 @@ const Contact = () => {
               </motion.div>
               {/* Social Media Links */}
               <motion.div
-                className="mt-8 flex items-center justify-between font-semibold mt-5"
+                className="mt-8 flex items-center justify-between font-semibold"
                 initial={{ opacity: 0 }}
                 animate={isContactInfoInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}

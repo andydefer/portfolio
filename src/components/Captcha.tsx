@@ -87,7 +87,7 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
   }, [captchaText]);
 
   return (
-    <div className="text-center mt-12">
+    <div className="text-center mt-12 px-2">
       {validationState !== VALIDATION_STATE.VALID && (
         <>
           <h2 className="text-md py-2 font-semibold">
@@ -96,9 +96,9 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
           <canvas
             ref={canvasRef}
             height="50"
-            className="m-auto w-full max-w-md border border-gray-300 mt-4"
+            className="m-auto w-full max-w-lg border border-gray-300 mt-4"
           />
-          <div className="flex gap-2 justify-center items-center flex-nowrap mt-3">
+          <div className="flex gap-2 justify-center max-w-lg items-center flex-nowrap mt-3">
             <input
               type="text"
               value={userInput}
