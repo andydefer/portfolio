@@ -80,42 +80,6 @@ const Footer = () => {
           </motion.div>
 
           {/* Quick links */}
-          <motion.div variants={fadeInUp} custom={1}>
-            <motion.h4
-              className="text-lg font-semibold mb-4"
-              initial={{ opacity: 0, y: 10 }}
-              animate={
-                isFooterInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
-              }
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Liens rapide
-            </motion.h4>
-            <motion.ul
-              className="space-y-2"
-              variants={staggerContainer}
-              initial="hidden"
-              animate={isFooterInView ? "visible" : "hidden"}
-            >
-              {data.routes.map((item, index) => (
-                <motion.li
-                  key={item.name}
-                  variants={fadeInUp}
-                  custom={index}
-                  whileHover="hover"
-                  whileTap="tap"
-                >
-                  <motion.a
-                    href={`#${item.link.toLowerCase()}`}
-                    className="text-gray-400 hover:text-white transition-colors"
-                    variants={linkHoverVariants}
-                  >
-                    {item.name}
-                  </motion.a>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
 
           {/* Contact */}
           <motion.div variants={fadeInUp} custom={2}>

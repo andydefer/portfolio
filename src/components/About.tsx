@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import {
-  fadeInLeft,
-  fadeInRight,
-  fadeInUp,
-  scaleUp,
-} from "../utils/animations";
+import { fadeInLeft, fadeInRight, fadeInUp } from "../utils/animations";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -116,31 +111,7 @@ const About = () => {
               n’ai cessé d’apprendre et d’améliorer mes compétences afin de
               rester à jour avec les dernières technologies.
             </motion.p>
-            <motion.div
-              className="grid grid-cols-2 gap-4 mb-8"
-              variants={scaleUp}
-            >
-              {[
-                { title: "Nom:", value: "Andy Kani" },
-                { title: "Adresse e-mail:", value: "andykanidimbu@gmail.com" },
-                { title: "Adresse:", value: "Kinshasa, RDC" },
-                { title: "Disponibilité:", value: "Ouvert aux opportunités" },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={
-                    isContentInView
-                      ? { opacity: 1, x: 0 }
-                      : { opacity: 0, x: 20 }
-                  }
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
-                >
-                  <h4 className="font-medium text-gray-900">{item.title}</h4>
-                  <p className="text-gray-600">{item.value}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+
             <motion.a
               href="#contact"
               className="inline-block px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
