@@ -90,14 +90,13 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
     <div className="text-center mt-12">
       {validationState !== VALIDATION_STATE.VALID && (
         <>
-          <h2 className="text-lg py-2 font-semibold">
+          <h2 className="text-md py-2 font-semibold">
             Veuillez entrer le texte du CAPTCHA
           </h2>
           <canvas
             ref={canvasRef}
-            width="200"
             height="50"
-            className="m-auto border border-gray-300 mt-4"
+            className="m-auto w-full max-w-md border border-gray-300 mt-4"
           />
           <div className="flex gap-2 justify-center items-center flex-wrap mt-3">
             <input
@@ -105,14 +104,24 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               placeholder="Entrez le texte ici"
-              className="p-2 text-lg"
+              className="p-2 grow-[2] text-lg border border-indigo-600"
             />
             <button
               type="button"
               onClick={verifyCaptcha}
-              className="px-4 py-2 text-lg bg-blue-500 text-white rounded hover:bg-blue-600"
+              className="p-2 text-lg bg-blue-500 text-white rounded hover:bg-blue-600"
             >
-              Vérifier
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m9.55 17.308l-4.97-4.97l.714-.713l4.256 4.256l9.156-9.156l.713.714z"
+                />
+              </svg>
             </button>
           </div>
         </>

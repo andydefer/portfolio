@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import { fadeInUp, staggerContainer } from "../utils/animations";
+import { staggerContainer } from "../utils/animations";
 
 // Skill progress component with animation
 const SkillProgress = ({
@@ -261,13 +261,16 @@ const Skills = () => {
           initial="hidden"
           animate={isTechInView ? "visible" : "hidden"}
         >
-          <motion.h3
-            className="text-xl font-semibold text-gray-800 text-center mb-8"
-            variants={fadeInUp}
-          >
-            Technologies avec lesquelles je travaille
-          </motion.h3>
-          <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <h2 className="text-3xl font-bold text-gray-900 text-center">
+            Mes outils
+          </h2>
+          <motion.div
+            className="h-1 w-20 bg-indigo-600 mx-auto mt-2"
+            initial={{ width: 0 }}
+            animate={isSectionInView ? { width: 80 } : { width: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          />
+          <motion.div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
