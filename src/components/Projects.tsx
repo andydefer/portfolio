@@ -145,7 +145,7 @@ const Projects = () => {
       description:
         "Farnana est une plateforme congolaise d’apprentissage en ligne, offrant des cours pratiques, accessibles à vie, ainsi que des formations avec certificats ou diplômes, en partenariat avec des institutions reconnues, le tout avec des options gratuites ou payantes.",
       tags: ["React", "Laravel", "MongoDB", "Stripe"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/farnana.jpg",
     },
     {
       id: 2,
@@ -154,7 +154,7 @@ const Projects = () => {
       description:
         "Afya est une plateforme congolaise de prise de rendez-vous médicaux en ligne, permettant aux patients de réserver des consultations facilement avec des professionnels de santé et de gestion des rendez-vous, le tout avec une interface simple et accessible.",
       tags: ["React", "Android", "Laravel", "Tailwind CSS"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/afya.jpg",
     },
     {
       id: 3,
@@ -163,7 +163,7 @@ const Projects = () => {
       description:
         "Skillwhere est une plateforme en ligne permet l'achat de matériaux de construction de qualité et la location d’équipements spécialisés, offrant une solution pratique et accessible pour les professionnels et particuliers dans le secteur de la construction.",
       tags: ["TypeScript", "React", "Symfony", "Socket.io"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/skillwhere.jpg",
     },
     {
       id: 4,
@@ -172,7 +172,7 @@ const Projects = () => {
       description:
         "Modern Structural Concept est une entreprise congolaise spécialisée dans l'architecture, la constructione t l'infrastructure, offrant des solutions innovantes et durables pour des projets de qualité en RDC.",
       tags: ["Vue Js", "Laravel", "Tailwind CSS"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/modern-structural-concept.jpg",
     },
     {
       id: 5,
@@ -181,7 +181,7 @@ const Projects = () => {
       description:
         "Bartban est une plateforme de financement participatif qui permet aux créateurs de projets de lever des fonds en ligne auprès de la communauté, en soutenant des initiatives créatives, sociales, et entrepreneuriales..",
       tags: ["Laravel", "React", "Tailwind CSS", "SerdiPay"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/bartban.jpg",
     },
     {
       id: 6,
@@ -190,7 +190,7 @@ const Projects = () => {
       description:
         "TechPreneurs est la maison mère de plateformes innovantes comme Skillwhere, Farnana, et Bartban, soutenant des initiatives technologiques et entrepreneuriales visant à révolutionner l'apprentissage en ligne, la gestion de projets et le financement participatif.",
       tags: ["React", "Redux", "API REST", "Firebase"],
-      imageUrl: "/assets/black-square.png",
+      imageUrl: "/assets/tech-preneurs.jpg",
     },
   ];
 

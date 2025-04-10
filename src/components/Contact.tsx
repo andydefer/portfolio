@@ -1,21 +1,16 @@
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import {
-  fadeInLeft,
-  fadeInRight,
-  fadeInUp,
-  popIn,
-  staggerContainer,
-} from "../utils/animations";
+import { fadeInLeft, fadeInUp, staggerContainer } from "../utils/animations";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   // Form state
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: "Andy Kani",
+    email: "andykanidimbu@gmail.com",
+    subject: "Demande de devis",
+    message: "Je souhaite obtenir un devis pour mon site",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,6 +43,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    console.log(formData);
     // Set submitting state and clear previous messages
     setIsSubmitting(true);
     setSubmitMessage({ type: "", text: "" });
@@ -393,159 +389,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
-            className="bg-white p-8 rounded-lg shadow-md"
-            ref={contactFormRef}
-            variants={fadeInRight}
-            initial="hidden"
-            animate={isContactFormInView ? "visible" : "hidden"}
-          >
-            <motion.h3
-              className="text-2xl font-semibold text-gray-900 mb-6"
-              variants={fadeInUp}
-            >
-              Contactez-moi
-            </motion.h3>
-
-            <motion.form onSubmit={handleSubmit} variants={staggerContainer}>
-              {/* Name input */}
-              <motion.div className="mb-6" variants={fadeInUp} custom={0}>
-                <label
-                  htmlFor="name"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Nom
-                </label>
-                <motion.input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  required
-                  whileFocus={{
-                    scale: 1.02,
-                    boxShadow: "0 0 0 3px rgba(99, 102, 241, 0.2)",
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                />
-              </motion.div>
-
-              {/* Email input */}
-              <motion.div className="mb-6" variants={fadeInUp} custom={1}>
-                <label
-                  htmlFor="email"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Adresse e-mail
-                </label>
-                <motion.input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  required
-                  whileFocus={{
-                    scale: 1.02,
-                    boxShadow: "0 0 0 3px rgba(99, 102, 241, 0.2)",
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                />
-              </motion.div>
-
-              {/* Subject input */}
-              <motion.div className="mb-6" variants={fadeInUp} custom={2}>
-                <label
-                  htmlFor="subject"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Sujet
-                </label>
-                <motion.input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  required
-                  whileFocus={{
-                    scale: 1.02,
-                    boxShadow: "0 0 0 3px rgba(99, 102, 241, 0.2)",
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                />
-              </motion.div>
-
-              {/* Message input */}
-              <motion.div className="mb-6" variants={fadeInUp} custom={3}>
-                <label
-                  htmlFor="message"
-                  className="block text-gray-700 font-medium mb-2"
-                >
-                  Message
-                </label>
-                <motion.textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  required
-                  whileFocus={{
-                    scale: 1.02,
-                    boxShadow: "0 0 0 3px rgba(99, 102, 241, 0.2)",
-                  }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                />
-              </motion.div>
-
-              {/* Submit button */}
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full px-6 py-3 text-white font-medium rounded-lg transition-colors duration-300 ${
-                  isSubmitting
-                    ? "bg-indigo-400 cursor-not-allowed"
-                    : "bg-indigo-600 hover:bg-indigo-700"
-                }`}
-                variants={popIn}
-                whileHover={
-                  !isSubmitting
-                    ? {
-                        scale: 1.03,
-                        boxShadow:
-                          "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                      }
-                    : {}
-                }
-                whileTap={!isSubmitting ? { scale: 0.97 } : {}}
-              >
-                {isSubmitting ? "En cours..." : "Envoyer"}
-              </motion.button>
-
-              {/* Success/Error message */}
-              {submitMessage.text && (
-                <motion.div
-                  className={`mt-4 p-3 rounded-lg text-center ${
-                    submitMessage.type === "success"
-                      ? "bg-green-100 text-green-800"
-                      : "bg-red-100 text-red-800"
-                  }`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {submitMessage.text}
-                </motion.div>
-              )}
-            </motion.form>
-          </motion.div>
+          <ContactForm />
         </div>
       </div>
     </section>
