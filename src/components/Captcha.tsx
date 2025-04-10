@@ -104,7 +104,7 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               placeholder="Entrez le texte ici"
-              className="p-2 grow-[2] text-lg border border-indigo-600"
+              className="p-2 grow-[2] w-[7rem] md:w-auto text-lg border border-indigo-600"
             />
             <button
               type="button"
