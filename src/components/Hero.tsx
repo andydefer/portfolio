@@ -64,7 +64,7 @@ const Hero = () => {
           >
             <motion.a
               href="#contact"
-              className="text-sm px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+              className="text-sm px-2 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
               whileHover={{
                 scale: 1.05,
                 boxShadow:
@@ -76,7 +76,7 @@ const Hero = () => {
             </motion.a>
             <motion.a
               href="#projects"
-              className="text-sm px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border border-indigo-600 hover:bg-indigo-50 transition-colors duration-300"
+              className="text-sm px-2 py-3 bg-white text-indigo-600 font-medium rounded-lg border border-indigo-600 hover:bg-indigo-50 transition-colors duration-300"
               whileHover={{
                 scale: 1.05,
                 boxShadow:
