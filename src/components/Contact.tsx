@@ -108,7 +108,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
           <motion.div
-            className="bg-white p-8 rounded-lg shadow-md max-h-[40rem]"
+            className="bg-white p-8 rounded-lg shadow-md max-h-[44rem]"
             ref={contactInfoRef}
             variants={fadeInLeft}
             initial="hidden"
@@ -347,7 +347,7 @@ const Contact = () => {
                 animate={isContactInfoInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <h4 className="text-lg font-medium text-gray-900 ">
+                <h4 className="text-md font-medium text-gray-900 ">
                   Prenez Contact
                 </h4>
                 <div className="flex space-x-4">
