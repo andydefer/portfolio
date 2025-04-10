@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
         {/* Left column with text */}
         <motion.div
-          className="md:w-1/2 md:pr-8 mb-8 md:mb-0"
+          className="md:w-1/2 md:pr-8 mb-8 mt-3 md:mb-0"
           initial="hidden"
           animate="visible"
           variants={fadeInLeft}
@@ -51,14 +51,13 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            Je conçois des applications web modernes, élégantes et adaptées à
-            tous les appareils. Passionné par la création d'expériences
-            utilisateur intuitives, je développe également des applications
-            Android performantes. Mon objectif est de bâtir des solutions
-            scalables et adaptées à vos besoins.
+            Je crée des applications web et des applications Android, pensés
+            pour offrir une expérience fluide sur tous les appareils. Chaque
+            projet est conçu pour valoriser votre image et répondre concrètement
+            à vos objectifs.
           </motion.p>
           <motion.div
-            className="flex flex-wrap gap-4"
+            className="flex flex-nowrap  gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
