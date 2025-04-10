@@ -112,38 +112,40 @@ const About = () => {
               rester à jour avec les dernières technologies.
             </motion.p>
 
-            <motion.a
-              href="#contact"
-              className="inline-block px-6 py-2 bg-indigo-600 mx-3 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-              }
-              transition={{ duration: 0.5, delay: 0.8 }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow:
-                  "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Prendre contact
-            </motion.a>
-
-            <motion.a
-              href="/assets/cv_andy_kani.png"
-              download
-              className="bg-indigo-600 mx-3 hover:bg-indigo-800 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
-            >
-              <svg
-                className="fill-current w-4 h-4 mr-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
+            <div className="flex gap-2">
+              <motion.a
+                href="#contact"
+                className="inline-block px-6 py-2 bg-indigo-600 mx-3 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={
+                  isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
+                transition={{ duration: 0.5, delay: 0.8 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow:
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-              </svg>
-              <span>Télécharger le CV</span>
-            </motion.a>
+                Prendre contact
+              </motion.a>
+
+              <motion.a
+                href="/assets/cv_andy_kani.png"
+                download
+                className="bg-indigo-600 mx-3 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+              >
+                <svg
+                  className="fill-current w-4 h-4 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Télécharger le CV</span>
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </div>
