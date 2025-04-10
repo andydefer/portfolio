@@ -98,7 +98,7 @@ const Captcha: React.FC<CaptchaProps> = ({ onChange }) => {
             height="50"
             className="m-auto w-full max-w-md border border-gray-300 mt-4"
           />
-          <div className="flex gap-2 justify-center items-center flex-wrap mt-3">
+          <div className="flex gap-2 justify-center items-center flex-nowrap mt-3">
             <input
               type="text"
               value={userInput}
