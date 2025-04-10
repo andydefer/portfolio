@@ -1,4 +1,3 @@
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -9,6 +8,7 @@ import {
   sendToFormspree,
 } from "../utils/contactFormHelpers";
 import { ContactFormData, contactFormSchema } from "../utils/formSchema";
+import Captcha from "./Captcha";
 
 // Définition du schéma de validation avec Zod
 
@@ -22,16 +22,20 @@ const ContactForm = () => {
     control,
     handleSubmit,
     formState: { errors, isSubmitting },
-    unregister,
+    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "Andy Kani",
-      email: "andykanidimbu@gmail.com",
-      subject: "Demande de devis",
-      message: "Demande de Devis",
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     },
   });
+
+  useEffect(() => {
+    console.log("change");
+  }, []);
   // Effacer le message après 5 secondes
   useEffect(() => {
     if (submitMessage.text) {
@@ -46,8 +50,7 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormData) => {
     setSubmitMessage({ type: "loading", text: "Envoi en cours..." });
     const dataWithoutToken: Partial<ContactFormData> = data;
-    unregister("hcaptchaToken");
-    delete dataWithoutToken.hcaptchaToken;
+    delete dataWithoutToken.captchaToken;
     try {
       await insertContactFormToDB(data);
 
@@ -56,6 +59,7 @@ const ContactForm = () => {
         type: "success",
         text: "Merci! Votre message a été envoyé.",
       });
+      reset();
     } catch (error) {
       console.error("Erreur lors de l'envoi du formulaire :", error);
       setSubmitMessage({
@@ -222,28 +226,26 @@ const ContactForm = () => {
                 </motion.p>
               )}
             </div>
-
             <div className="mb-4">
               <Controller
-                name="hcaptchaToken"
+                name="captchaToken"
                 control={control}
                 defaultValue=""
-                render={({ field }) => (
-                  <HCaptcha
-                    sitekey="99bc87b0-bb28-4674-a360-677c4adc68c8"
-                    onVerify={field.onChange}
-                    onExpire={() => field.onChange("")}
-                  />
-                )}
+                rules={{
+                  required: "Veuillez valider le captcha.",
+                  validate: (value) =>
+                    value === "correct" || "Captcha incorrect.", // Vérifiez la réponse ici
+                }}
+                render={({ field }) => <Captcha onChange={field.onChange} />}
               />
-              {errors.hcaptchaToken && (
+              {errors.captchaToken && (
                 <motion.p
-                  className="text-red-500 text-xs"
+                  className="text-red-500 text-xs text-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Veuillez valider le captcha.
+                  {errors.captchaToken.message}
                 </motion.p>
               )}
             </div>
