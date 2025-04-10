@@ -71,7 +71,7 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="pb-4 pt-8 bg-gray-50">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-2 lg:px-8">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
