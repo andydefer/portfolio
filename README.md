@@ -1,51 +1,18 @@
-# React + TypeScript + Vite
+# Portfolio d'Andy Kani Dimbu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur le portfolio d'Andy Kani Dimbu, un développeur web et entrepreneur congolais. Ce site présente ses projets professionnels dans le développement web, le recyclage, et ses initiatives éducatives.
 
-Currently, two official plugins are available:
+## Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** avec **TypeScript** et **Vite** pour une expérience fluide et rapide.
+- Plugins :
+  - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react) pour un rechargement rapide via Babel.
+  - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) pour un rechargement rapide via SWC.
 
-## Expanding the ESLint configuration
+## À propos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Andy Kani Dimbu est le fondateur de **GreenPack's Solutions** et travaille sur des projets visant à améliorer l'insalubrité à Kinshasa et à promouvoir l'éducation à travers sa plateforme **Farnana**.
 
-- Configure the top-level `parserOptions` property like this:
+## Contact
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# portfolio
+Pour toute question, contactez Andy via [andykanidimbu@gmail.com](mailto:andykanidimbu@gmail.com).
