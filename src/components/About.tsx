@@ -112,10 +112,10 @@ const About = () => {
               rester à jour avec les dernières technologies.
             </motion.p>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 text-sm">
               <motion.a
                 href="#contact"
-                className="inline-block px-6 py-2 bg-indigo-600 mx-3 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+                className="inline-block px-6 py-2 bg-indigo-600 mx-3 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={
                   isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
