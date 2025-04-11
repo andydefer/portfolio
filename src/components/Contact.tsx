@@ -293,12 +293,13 @@ const Contact = () => {
                   <h4 className="text-lg font-medium text-gray-900">
                     WhatsApp
                   </h4>
-                  <motion.p
+                  <motion.a
+                    href="https://wa.me/243827833329"
                     className="text-gray-600 mt-1"
                     whileHover={{ scale: 1.02, x: 5, color: "#4F46E5" }}
                   >
                     +243 827 833 329
-                  </motion.p>
+                  </motion.a>
                 </div>
               </motion.div>
 
@@ -347,7 +348,7 @@ const Contact = () => {
                 animate={isContactInfoInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <h4 className="text-md font-medium text-gray-900 ">
+                <h4 className="text-sm md:text-md font-medium text-gray-900 ">
                   Prenez Contact
                 </h4>
                 <div className="flex space-x-4">
